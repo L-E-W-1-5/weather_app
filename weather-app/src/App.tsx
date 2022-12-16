@@ -33,11 +33,7 @@ async function getWeather() {
        
       
         {weather && <Forecast weatherData={weather}></Forecast>}
-        <div className="rainy"></div>
-        <div className="sunny"></div>
-        <div className="cloudy"></div>
-        <div className="stormy"></div>
-        <div className="snowy"></div>
+        
 
         
        </div>
