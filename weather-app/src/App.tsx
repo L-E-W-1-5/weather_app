@@ -8,7 +8,7 @@ const key = 'a48e76099bbc0659bc5c71ffd7d4ffd4'
 
 function App() {
 
-const [cityID, setCityID] = useState(6167865)
+const [cityID, setCityID] = useState(null)
 const [weather, setWeather] = useState()
 
 async function getWeather() {
@@ -23,21 +23,19 @@ async function getWeather() {
   });
   if(weather)
   console.log(weather)
-  console.log(cityID)
+  // console.log(cityID)
 }
-
-
-
 
   return (
     <div className="App">
       <Buttons setID={setCityID} getReq={getWeather} name={cityID}></Buttons>
+      {/* <Forecast weatherData={weather} /> */}
       
-      {weather && <Forecast temp={weather.main["temp"]}></Forecast>}
+      {weather && <Forecast temp={weather}></Forecast>}
     </div>
   );
 }
 
 export default App;
 
-{count && <h1>Messages: {count}</h1>}
+//{count && <h1>Messages: {count}</h1>}

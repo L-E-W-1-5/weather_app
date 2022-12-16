@@ -1,19 +1,23 @@
 import React from 'react'
 
-type weather = {
-    temp: string
-    current: string
-    wind: string
-}
 
-const Forecast = (props:weather):JSX.Element => {
-  
+
+const Forecast = (props: any): JSX.Element => {
+    
+
+    //const temp = props.weatherData.main.temp
+    
+    console.log("this is props", props.weatherData)
+
+    //const currentConditions = props.weatherData.main.current
+
+
     return (
         <>
             <ul>
-                <li>Temperature: {props.temp}</li>
+                {/* <li>Temp: {temp}</li> */}
                 <li>Current Conditions: {props.current}</li>
-                <li>Wind: {props.wind}</li>
+                <li>Wind:{props.wind}</li>
             </ul>    
         </>
     )
