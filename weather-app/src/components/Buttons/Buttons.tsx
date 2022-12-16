@@ -1,9 +1,13 @@
 import React from 'react'
 import './Buttons.css'
 
+type ButtonProps = {
+    setID: Function
+    getReq: () => void
+    cityID: string | undefined
+}
 
-
-const Buttons = (props:any):JSX.Element => {
+const Buttons = (props:ButtonProps):JSX.Element => {
 
 
 
