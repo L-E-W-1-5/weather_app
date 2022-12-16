@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-
 import './App.css';
 import Buttons from './components/Buttons/Buttons'
+import Forecast from './components/Forecast/Forecast'
 
 const key = 'a48e76099bbc0659bc5c71ffd7d4ffd4'
 
@@ -32,8 +32,12 @@ async function getWeather() {
   return (
     <div className="App">
       <Buttons setID={setCityID} getReq={getWeather} name={cityID}></Buttons>
+      
+      {weather && <Forecast temp={weather.main["temp"]}></Forecast>}
     </div>
   );
 }
 
 export default App;
+
+{count && <h1>Messages: {count}</h1>}
