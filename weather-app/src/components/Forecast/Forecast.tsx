@@ -1,5 +1,6 @@
 import React from 'react'
 import './Forecast.css'
+//import './Forecast.scss'
 
 
 
@@ -32,19 +33,47 @@ const Forecast = (props: any): JSX.Element => {
 
     //const currentConditions = props.weatherData.main.current
 
-
     return (
-        <div className="forecast_Container">
-            <div>
-                <h3>{props.weatherData.name}</h3>
-                <p>Temp: {props.weatherData.main.temp}</p>
-                <p>Current Conditions: {props.weatherData.weather[0]["description"]}</p>
-                <p>Wind Speed: {props.weatherData.wind.speed}</p>
-            </div>    
-            <div className={currentSky === "sunny" ? "sunny" : currentSky === "raining" ? "rainy" : currentSky === "cloudy" ? "cloudy" : currentSky === "snowing" ? "snowy" : currentSky === "storms" ? "stormy" : "sunny"}></div>
-            
-        </div>
+        <body>
+
+	<div className="container">
+		<div className="weather-card">
+			<div className="image-section">
+				<small className="type">rainy</small>
+			</div>
+			<div className="info-section">
+				<div className="wave"></div>
+				<div className="layer-1"></div>
+				<div className="layer-2"></div>
+				<div className="layer-3"></div>
+				<div className="contents">
+                <h1>{ props.weatherData.main.temp}<span className="deg">&deg;</span></h1>
+					<h3>{props.weatherData.name}</h3>
+					<small>Current Conditions: {props.weatherData.weather[0]["description"]}</small>
+				</div>
+			</div>
+		</div>
+            </div>
+        <div className={currentSky === "sunny" ? "sunny" : currentSky === "raining" ? "rainy" : currentSky === "cloudy" ? "cloudy" : currentSky === "snowing" ? "snowy" : currentSky === "storms" ? "stormy" : "sunny"}></div>
+</body>
     )
+
+
+
+    // return (
+    //     <div className="container">
+    //         <div className='weather-card'>
+    //             <div className='image-section'>
+    //             <h3>{props.weatherData.name}</h3>
+    //             <p>Temp: {props.weatherData.main.temp}</p>
+    //             <p>Current Conditions: {props.weatherData.weather[0]["description"]}</p>
+    //             <p>Wind Speed: {props.weatherData.wind.speed}</p>
+    //                 </div> 
+    //         </div>    
+            // <div className={currentSky === "sunny" ? "sunny" : currentSky === "raining" ? "rainy" : currentSky === "cloudy" ? "cloudy" : currentSky === "snowing" ? "snowy" : currentSky === "storms" ? "stormy" : "sunny"}></div>
+            
+    //     </div>
+    // )
 }
 
 export default Forecast
