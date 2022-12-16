@@ -30,14 +30,22 @@ async function getWeather() {
 
 
   return (
-    <div className="App">
-      <Buttons setID={setCityID} getReq={getWeather} name={cityID}></Buttons>
+
+      <div className="App">
+        <Buttons setID={setCityID} getReq={getWeather} name={cityID}></Buttons>
       
-      {weather && <Forecast temp={weather.main["temp"]}></Forecast>}
-    </div>
+        {/* {weather && <Forecast temp={weather}></Forecast>} */}
+        <div className="rainy"></div>
+        <div className="sunny"></div>
+        <div className="cloudy"></div>
+        <div className="stormy"></div>
+        <div className="snowy"></div>
+
+        
+       </div>
+
   );
 }
 
 export default App;
 
-{count && <h1>Messages: {count}</h1>}
