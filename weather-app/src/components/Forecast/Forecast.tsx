@@ -45,14 +45,15 @@ const Forecast = (props: any): JSX.Element => {
                 
                     <h1>{Math.floor(props.weatherData.main.temp - 273.15)}<span className="deg">&deg;</span></h1>
                 
-					    <span><h3>{props.weatherData.name}</h3><div className="weatherIcon"><i className={currentSky === "sunny" ? "wi wi-day-sunny" : currentSky === "raining" ? "wi wi-day-rain" : currentSky === "cloudy" ? "wi wi-day-cloudy" : currentSky === "snowing" ? "wi wi-day-snow" : "sunny"}></i></div></span>
-				
-					    <small>Current Conditions: {props.weatherData.weather[0]["description"]}</small>
-				    </div>
-			    </div>
-		    </div>
-        </div>    
-    </body>
+					{/* <span><h3>{props.weatherData.name}</h3><div className="weatherIcon"><i className={currentSky === "sunny" ? "wi wi-day-sunny" : currentSky === "raining" ? "wi wi-day-rain" : currentSky === "cloudy" ? "wi wi-day-cloudy" : currentSky === "snowing" ? "wi wi-day-snow" : "sunny"}></i></div></span> */}
+                            {/* <h3>{props.weatherData.name}</h3> */}
+					<small>Current Conditions: {props.weatherData.weather[0]["description"]}</small>
+				</div>
+			</div>
+		</div>
+            </div>
+        
+</body>
     )
 }
 
