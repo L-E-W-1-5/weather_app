@@ -1,4 +1,5 @@
 import React from 'react'
+import './Buttons.css'
 
 
 
@@ -7,8 +8,8 @@ const Buttons = (props:any):JSX.Element => {
 
 
     return (
-        <div>
-            <select onChange={(e)=>{props.setID(e.target.value)}} value={props.cityID}>
+        <div className="navButtons">
+            <select className="buttons" onChange={(e)=>{props.setID(e.target.value)}} value={props.cityID}>
                 <option></option>
                 <option value="2643741">London</option>
                 <option value="2637487">Southampton</option>
@@ -18,7 +19,7 @@ const Buttons = (props:any):JSX.Element => {
                 <option value="2648579">Glasgow</option>
                 <option value="3534452">Venegas</option>
             </select>
-            <button onClick={() => {props.getReq()}}>Get Weather</button>
+            <button className="buttons" onClick={() => {props.getReq()}}>Get Weather</button>
            
         </div>
     )

@@ -1,4 +1,5 @@
 import React from 'react'
+import './Forecast.css'
 
 
 
@@ -33,7 +34,7 @@ const Forecast = (props: any): JSX.Element => {
 
 
     return (
-        <>
+        <div className="forecast_Container">
             <ul>
                 <li>Temp: {props.weatherData.main.temp}</li>
                 <li>Current Conditions: {props.weatherData.weather[0]["description"]}</li>
@@ -41,7 +42,7 @@ const Forecast = (props: any): JSX.Element => {
             </ul>    
             <div className={currentSky === "sunny" ? "sunny" : currentSky === "raining" ? "rainy" : currentSky === "cloudy" ? "cloudy" : currentSky === "snowing" ? "snowy" : currentSky === "storms" ? "stormy" : "sunny"}></div>
             
-        </>
+        </div>
     )
 }
 

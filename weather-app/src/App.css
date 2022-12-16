@@ -5,6 +5,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  
 }
 
 .windowSize {
@@ -158,7 +159,7 @@
 
 .sunny { 
 	animation: sunny 15s linear infinite;
-	background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
 	height: 140px;
 	width: 20px; 
 	margin-left: -15px;
@@ -167,7 +168,7 @@
 	top: 20px;
 }
 .sunny:before {
-	background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
 	content: ''; 
 	height: 140px; 
 	width: 20px;
