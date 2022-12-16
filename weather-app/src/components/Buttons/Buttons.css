@@ -5,7 +5,7 @@
     align-items: center;
     height: 50px;
     width: 100%;
-    background-color: rgb(102, 132, 240);
+    background-color: rgb(68, 67, 67);
 }
 
 .buttons {
@@ -13,4 +13,5 @@
     width: 170px;
     border-radius: 5px;
     background-color: rgb(222, 211, 245);
+    font-weight: 600;
 }

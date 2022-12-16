@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
 .App {
   text-align: center;
-  background-color: #cfbae9;
+  /* background-color: #cfbae9; */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -25,16 +27,63 @@
 .searchInputBar {
   width: 300px;
   height: 30px;
+  border-radius: 10px;
 }
 
 .searchButton {
   width: 200px;
   height: 50px;
+  border-radius: 15px;
+  background-color: rgb(222, 211, 245);
+  font-weight: 600;
+}
+
+/* import */
+
+
+body {
+	background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+	background-size: cover;
+	-webkit-animation: slidein 100s;
+	animation: slidein 100s;
+
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+	from {
+		background-position: top;
+		background-size: 3000px;
+	}
+
+	to {
+		background-position: -100px 0px;
+		background-size: 2750px;
+	}
+}
+
+@keyframes slidein {
+	from {
+		background-position: top;
+		background-size: 3000px;
+	}
+
+	to {
+		background-position: -100px 0px;
+		background-size: 2750px;
+	}
+
 }
 
 
-
-
+/* This is the weather icons */
 .rainy {
 	animation: rainy 5s ease-in-out infinite 1s;
 	background: #CCCCCC; 
