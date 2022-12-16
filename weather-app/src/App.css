@@ -98,8 +98,8 @@ body {
 	height:50px;
 	width: 50px;
 	margin-left: -60px;
-	/* position: absolute; */
-	left: 427px;
+	position: absolute;
+	left: 90px; 
 	top: 70px;
 }
 .rainy:after {
@@ -110,7 +110,7 @@ body {
 	height: 15px;
 	width: 120px;
 	opacity: 0.2;
-	/* position: absolute; */
+	position: absolute;
 	left: 5px; 
 	bottom: -60px;
 	transform: scale(1);

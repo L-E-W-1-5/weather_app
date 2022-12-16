@@ -1,14 +1,30 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+
 .forecast_Container {
-    width: 450px;
-    height:200px;
+    width: 400px;
+    height: 360px;
     border: 3px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 100px;
+    margin: 50px;
     background-color: rgb(230, 229, 229);
     border-radius: 25px;
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
 }
+
+.weatherIcon{
+    flex: 1 100%;
+    height: 180px;
+    background: rgb(230, 229, 229);
+    font-family: weathericons;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 100px;
+
+  }
 
 h3 {
     text-decoration: underline 3px;

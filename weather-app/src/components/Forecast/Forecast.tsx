@@ -30,12 +30,13 @@ const Forecast = (props: any): JSX.Element => {
         }
     }
 
-    //const currentConditions = props.weatherData.main.current
+    //cloudy - rain - sunny - snow - wi wi-day-lightening"
 
 
     return (
         <div className="forecast_Container">
             <div>
+                <div className="weatherIcon"><i className={currentSky === "sunny" ? "wi wi-day-sunny" : currentSky === "raining" ? "wi wi-day-rain" : currentSky === "cloudy" ? "wi wi-day-cloudy" : currentSky === "snowing" ? "wi wi-day-snow" : "sunny"}></i></div>
                 <h3>{props.weatherData.name}</h3>
                 <p>Temp: {props.weatherData.main.temp}</p>
                 <p>Current Conditions: {props.weatherData.weather[0]["description"]}</p>
