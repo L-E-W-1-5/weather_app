@@ -53,16 +53,15 @@ function App() {
   return (
 
     <div className="App">
-      
-      
+      <div className="center">
         <Buttons setID={setCityID} getReq={getWeather} name={cityID}></Buttons>
         {weather && <Forecast weatherData={weather}></Forecast>}
         <div className="searchBar">
           <input className="searchInputBar" onChange={handleChange}></input>
           <button className="searchButton" onClick={handleClick}>Click to Search</button>
         </div>
+        </div>
        </div>
-
   );
 }
 
