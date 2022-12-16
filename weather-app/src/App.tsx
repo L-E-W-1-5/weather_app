@@ -30,8 +30,9 @@ async function getWeather() {
 
       <div className="App">
         <Buttons setID={setCityID} getReq={getWeather} name={cityID}></Buttons>
+       
       
-        {/* {weather && <Forecast temp={weather}></Forecast>} */}
+        {weather && <Forecast weatherData={weather}></Forecast>}
         <div className="rainy"></div>
         <div className="sunny"></div>
         <div className="cloudy"></div>

@@ -16,7 +16,7 @@ const Forecast = (props: any): JSX.Element => {
         <>
             <ul>
                 {/* <li>Temp: {temp}</li> */}
-                <li>Current Conditions: {props.current}</li>
+                <li>Current Conditions: {props.weatherData.main.temp}</li>
                 <li>Wind:{props.wind}</li>
             </ul>    
         </>
