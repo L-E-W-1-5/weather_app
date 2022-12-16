@@ -30,8 +30,6 @@ async function getWeather() {
 
       <div className="App">
         <Buttons setID={setCityID} getReq={getWeather} name={cityID}></Buttons>
-       
-      
         {weather && <Forecast weatherData={weather}></Forecast>}
         
 

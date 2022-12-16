@@ -9,7 +9,25 @@ const Forecast = (props: any): JSX.Element => {
     
     console.log("this is props", props.weatherData)
 
-    const currentSky = props.weatherData.weather[0]["description"]
+    let currentSky = props.weatherData.weather[0]["description"]
+
+    if (currentSky){
+        if (currentSky.includes("cloud") || currentSky.includes("overcast")){
+            currentSky = "cloudy"
+        }
+        else if(currentSky.includes("rain")){
+            currentSky = "raining"
+        }
+        else if(currentSky.includes("clear") || currentSky.includes("sun")){
+            currentSky = "sunny"
+        }
+        else if(currentSky.includes("snow") || currentSky.includes("sleet")){
+            currentSky = "snowing"
+        }
+        else if(currentSky.includes("storm") || currentSky.includes("lightening") || currentSky.includes("heavy rain")){
+            currentSky = "storms"
+        }
+    }
 
     //const currentConditions = props.weatherData.main.current
 
@@ -22,11 +40,7 @@ const Forecast = (props: any): JSX.Element => {
                 <li>Wind Speed: {props.weatherData.wind.speed}</li>
             </ul>    
             <div className={currentSky === "sunny" ? "sunny" : currentSky === "raining" ? "rainy" : currentSky === "cloudy" ? "cloudy" : currentSky === "snowing" ? "snowy" : currentSky === "storms" ? "stormy" : "sunny"}></div>
-            {/* <div className="rainy"></div>
-            <div className="sunny"></div>
-            <div className="cloudy"></div>
-            <div className="stormy"></div>
-            <div className="snowy"></div> */}
+            
         </>
     )
 }
