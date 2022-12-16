@@ -35,11 +35,12 @@ const Forecast = (props: any): JSX.Element => {
 
     return (
         <div className="forecast_Container">
-            <ul>
-                <li>Temp: {props.weatherData.main.temp}</li>
-                <li>Current Conditions: {props.weatherData.weather[0]["description"]}</li>
-                <li>Wind Speed: {props.weatherData.wind.speed}</li>
-            </ul>    
+            <div>
+                <h3>{props.weatherData.name}</h3>
+                <p>Temp: {props.weatherData.main.temp}</p>
+                <p>Current Conditions: {props.weatherData.weather[0]["description"]}</p>
+                <p>Wind Speed: {props.weatherData.wind.speed}</p>
+            </div>    
             <div className={currentSky === "sunny" ? "sunny" : currentSky === "raining" ? "rainy" : currentSky === "cloudy" ? "cloudy" : currentSky === "snowing" ? "snowy" : currentSky === "storms" ? "stormy" : "sunny"}></div>
             
         </div>
