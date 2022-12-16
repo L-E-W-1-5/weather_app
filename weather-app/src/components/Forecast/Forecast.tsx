@@ -8,8 +8,6 @@ const Forecast = (props: any): JSX.Element => {
     
 
     //const temp = props.weatherData.main.temp
-    
-    console.log("this is props", props.weatherData)
 
     let currentSky = props.weatherData.weather[0]["description"]
 
@@ -30,8 +28,7 @@ const Forecast = (props: any): JSX.Element => {
             currentSky = "storms"
         }
     }
-
-    //const currentConditions = props.weatherData.main.current
+    console.log(props.weatherData)
 
     return (
         <body>
@@ -39,7 +36,7 @@ const Forecast = (props: any): JSX.Element => {
 	<div className="container">
 		<div className="weather-card">
 			<div className="image-section">
-				<small className="type">rainy</small>
+				<small className="type">{props.weatherData.sys.country}</small>
 			</div>
 			<div className="info-section">
 				<div className="wave"></div>
@@ -47,7 +44,7 @@ const Forecast = (props: any): JSX.Element => {
 				<div className="layer-2"></div>
 				<div className="layer-3"></div>
 				<div className="contents">
-                <h1>{ props.weatherData.main.temp}<span className="deg">&deg;</span></h1>
+                <h1>{Math.floor(props.weatherData.main.temp - 273.15)}<span className="deg">&deg;</span></h1>
 					<h3>{props.weatherData.name}</h3>
 					<small>Current Conditions: {props.weatherData.weather[0]["description"]}</small>
 				</div>
