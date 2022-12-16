@@ -9,7 +9,8 @@ const key = 'a48e76099bbc0659bc5c71ffd7d4ffd4'
 function App() {
 
 const [cityID, setCityID] = useState(null)
-const [weather, setWeather] = useState()
+  const [weather, setWeather] = useState()
+  const [searchVal, setSearchVal] = useState()
 
 async function getWeather() {
   await fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)
@@ -26,10 +27,34 @@ async function getWeather() {
   // console.log(cityID)
 }
 
+  
+      function handleChange(event: any) {
+      let citySearch = event.target.value;
+      console.log(citySearch)
+      setSearchVal(citySearch);
+  }
+
+  async function handleClick() {
+      async function getWeather() {
+      await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + searchVal + '&appid=' + key)
+      .then((resp) => { return resp.json() }) // Convert data to json
+      .then((data) => { setWeather(data);
+      })
+      .catch(() => {
+        // catch any errors
+      });
+      if(weather)
+      console.log(weather)
+      // console.log(cityID)
+    }
+    getWeather()
+    }
+
   return (
 
-      <div className="App">
-        
+    <div className="App">
+      <input onChange={handleChange}></input>
+      <button onClick={handleClick}>Click to Search</button>
         <Buttons setID={setCityID} getReq={getWeather} name={cityID}></Buttons>
         {weather && <Forecast weatherData={weather}></Forecast>}
         
