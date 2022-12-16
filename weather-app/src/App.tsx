@@ -51,7 +51,7 @@ function App() {
   }
 
   return (
-
+    <div className="center">
     <div className="App">
       
       
@@ -62,7 +62,7 @@ function App() {
           <button className="searchButton" onClick={handleClick}>Click to Search</button>
         </div>
        </div>
-
+    </div>
   );
 }
 
