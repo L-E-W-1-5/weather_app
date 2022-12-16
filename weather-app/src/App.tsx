@@ -23,14 +23,15 @@ function App() {
       // catch any errors
     });
     if(weather)
-    console.log(weather)
+      //console.log(weather)
+    console.log("hello")
     // console.log(cityID)
   }
 
   
   function handleChange(event: any) {
     let citySearch = event.target.value;
-    console.log(citySearch)
+    //console.log(citySearch)
     setSearchVal(citySearch);
   }
 
