@@ -23,6 +23,7 @@ async function getWeather() {
   });
   if(weather)
   console.log(weather)
+  console.log(cityID)
 }
 
 
