@@ -26,7 +26,6 @@ const Forecast = (props: any): JSX.Element => {
         }
     }
 
-    console.log(props.weatherData)
 
     return (
     <body>
