@@ -1,12 +1,36 @@
 import React from 'react'
 import './Forecast.css'
+import { useState } from 'react'
 //import './Forecast.scss'
 
 
 
 const Forecast = (props: any): JSX.Element => {
-    
-    let currentSky = props.weatherData.weather[0]["description"]
+
+    const [popupWarn, setpopupWarn] = useState(false);
+
+    let currentSky
+
+    const settingOpacity = () => {
+        setpopupWarn(false);
+        console.log(popupWarn);    
+    }
+
+    if (props.weatherData.weather){
+        currentSky = props.weatherData.weather[0]["description"]
+    }
+    else{
+        if (popupWarn !== true){
+            setpopupWarn(true);
+        }
+        return (
+            <div className={popupWarn === true ? "popupVisible" : "popupInvisible"}>
+                <h3>This place doesnt exist.</h3>
+                <button onClick={settingOpacity}>OK</button>
+            </div>
+        )
+    }
+
 
     if (currentSky){
         if (currentSky.includes("cloud") || currentSky.includes("overcast")){

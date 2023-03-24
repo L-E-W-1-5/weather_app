@@ -43,7 +43,12 @@ function App():JSX.Element {
       });
       if(weather)
         console.log(weather)
- 
+  }
+
+  const handleKeyPress = (e:any) => {
+    if (e.key === "Enter"){
+      handleClick();
+    }
   }
 
   return (
@@ -57,7 +62,7 @@ function App():JSX.Element {
 
         <div className="searchBar">
 
-          <input className="searchInputBar" onChange={handleChange}></input>
+          <input className="searchInputBar" onChange={handleChange} onKeyUp={handleKeyPress}></input>
           <button className="searchButton" onClick={handleClick}>Click to Search</button>
 
         </div>

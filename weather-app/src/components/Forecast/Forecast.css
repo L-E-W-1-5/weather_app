@@ -169,6 +169,34 @@ body {
     color: #434343;
 }
 
+.popupVisible{
+    background: white;
+    position: fixed;
+    left: 45%;
+    top: 45%;
+    width: 20%;
+    height: 20%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; 
+}
+
+.popupInvisible{
+    background: white;
+    position: fixed;
+    left: 45%;
+    top: 45%;
+    width: 20%;
+    height: 20%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2; 
+}
+
 @-moz-keyframes spin {
     from {
         transform: rotateY(0deg);
