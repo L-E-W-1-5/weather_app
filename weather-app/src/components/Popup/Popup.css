@@ -1,0 +1,47 @@
+.popup-window{
+    background: white;
+    position: fixed;
+    left: 45%;
+    top: 45%;
+    width: 35%;
+    height: 30%;
+    border: 3px solid black;
+    opacity: 1; 
+    z-index: 10;
+}
+
+.popup-navbar{
+    margin-bottom: auto;
+    height: 30px;
+    width: 100%;
+    background: grey;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.popup-navbar-button{
+    margin: 5px;
+}
+
+.popupVisible{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupInvisible{
+    background: white;
+    position: fixed;
+    left: 45%;
+    top: 45%;
+    width: 20%;
+    height: 20%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2; 
+}
